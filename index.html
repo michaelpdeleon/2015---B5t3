@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TTT desktop</title>
+
+<!-- The following code is from the microsite BEGIN -->
+<link rel="stylesheet" href="css/global.css" type="text/css"/>
+<link rel="stylesheet" href="css/b5base.css" type="text/css"/>
+<link rel="shortcut icon" href="images/template/favicon.ico"/>
+<link href="css/browse.css" rel="stylesheet" type="text/css"/>
+<link href="css/modal.css" rel="stylesheet" type="text/css"/> 
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<!-- The following code is from the microsite END -->
+
+<!-- Michael de Leon's custom style sheet -->
+<link href="css/ms-template.css" type="text/css">
+
+<!-- Michael de Leon's CSS styles. CUT HERE. CUSTOM CSS BEGIN -->
+<style type="text/css">
+div#b5 {
+  width: 960px;
+  margin: 0 auto;
+}
+div#b5 div#header {
+  height: 240px;
+  background: url('images/ttt-header1.jpg') no-repeat;
+  margin: 0 auto 20px;
+}
+div#b5 p.sales-notice {
+  margin: 0 0 10px 0;
+  padding: 0;
+  color: #000;
+  font-size: 1em;
+  text-align: center;
+  clear: both;
+}
+div#b5 div#items-section {
+  width: 900px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+div#b5 div#items-section ul {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+div#b5 div#items-section ul li {
+  float: left;
+  position: relative;
+  list-style: none;
+  margin: 0 15px 15px 0;
+  padding: 0;
+  width: 150px;
+  height: 300px;
+  border: 1px #CCC solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
+div#b5 div#items-section ul li.last {
+  margin-right: 0;
+}
+div#b5 div#items-section ul li img.item-pic {
+  display: block;
+  width: auto;
+}
+div#b5 div#items-section ul li img.on-sale-now {
+  display: block;
+  width: 90px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+div#b5 div#items-section ul li div.buy-online-now {
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #ff2300;
+  color: #fff;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+div#b5 div#items-section ul li div.item-title {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #333890;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+div#b5 div#items-section ul li div.item-title div {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  font-size: 2em;
+  font-weight: bolder;
+  color: #FFF;
+}
+div#b5 div#items-section ul li div.item-title h1 {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 80%;
+  text-transform: titlecase;
+  font-size: 0.96em;
+  font-weight: normal;
+  color: #FFF;
+  padding: 0;
+}
+div#b5 div#items-section ul li div.item-title h1 span {
+  font-weight: bold;
+  color: #FFF;
+  line-height: 120%;
+}
+div#b5 div#items-section ul li div.item-hover {
+  position: absolute;
+  overflow:hidden;
+  display:none;
+  bottom: 0px;
+  left: 15px;
+  right: 15px;
+  height: 160px;
+  text-align: center;
+  background: url('images/1x1trans.png') repeat; /* 1px 90% transparent png */
+  border: 1px solid rgb(255, 181, 181);
+}
+div#b5 div#items-section ul li div.item-hover div.prices-wrapper {
+  width: 170px;
+  height: auto;
+  margin: 15px 0 0 15px;
+}
+div#b5 div#items-section ul li div.item-hover div.sale-price {
+  float: left;
+  font-size: 26px;
+  color: #F00;
+  font-weight: bold;
+}
+div#b5 div#items-section ul li div.item-hover div.regular-price {
+  float: left;
+  font-size: 10px;
+  margin-right: 15px;
+}
+div#b5 div#items-section ul li div.item-hover div.regular-price span {
+  font-size: 12px;
+  text-decoration: line-through;
+  line-height: 100%
+}
+div#b5 div#items-section ul li div.item-hover div.normal-price {
+  font-size: 26px;
+  color: #000;
+  font-weight: bold;
+}
+div#b5 div#items-section ul li div.item-hover div sup,
+div#b5 div#items-section ul li div.item-hover div span sup,
+div#b5 div#items-section ul li div.item-hover div span.price-each-txt {
+  font-size: 0.5em;
+  color: inherit;
+}
+div#b5 div#items-section ul li div.item-hover div.view-product {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+}
+div#b5 div#items-section ul li div.item-hover div.view-product a.red-cta {
+  position: static;
+  font-size: 13px;
+}
+
+div#b5 div.availability { 
+  margin: 0;
+  padding: 5px;
+  width:100%;
+  position:absolute; 
+  left:0;
+  bottom:40px;
+  background-color: #CCC;
+  color: #000; 
+  overflow:hidden;
+}
+
+div#b5 div.availability span.online {
+  display: inline;
+  color: inherit;
+}
+
+div#b5 div#items-section li:hover .item-hover { display:block; }
+
+div#b5 a.main-cta {
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 6px 33px 6px 10px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-decoration: none;
+}
+div#b5 a.red-cta {
+    color: #FFFFFF;
+    background-image: url('images/cta-white-arrow.png');
+    background-color: #e30000;
+    background-color: -moz-linear-gradient(top, #ff0000 0%, #e30000 100%);
+    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#e30000));
+    background-color: -webkit-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: -o-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: -ms-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: linear-gradient(to bottom, #ff0000 0%,#e30000 100%);
+}
+div#b5 a.red-cta.fat-cta {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div#b5 a.red-cta:hover {
+    background-color: #900;
+}
+</style>
+<!-- Michael de Leon's CSS styles. CUT HERE. CUSTOM CSS END -->
+
+</head>
+
+<body>
+<header>
+	<section class="headerwrpr">
+    	<img src="images/template/header.jpg" alt="header">
+    </section>
+</header>
+<nav>
+	<div class="navwrpr">
+    	<img src="images/template/nav.jpg" alt="nav">
+    </div>
+</nav>
+<section id="wrapper">
+	<section id="container">
+    	<section class="brandslist">
+        	<img src="images/template/brandslist.jpg" alt="brandslist">
+        </section>
+        <<!-- Michael de Leon's code. CUT HERE. CUSTOM CODE BEGIN -->
+        <div id="b5">
+            <div id="header">
+                &nbsp;</div>
+            <p class="sales-notice">
+                Sale prices valid now thru 5/2/15</p>
+            <div id="items-section">
+                <!-- Make sure the width for each row of li's has a total of 844px or less -->
+                <ul>
+                    
+                    
+                    <!-- 1 -->
+                    <li style="width: 244px;">
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="normal-price"><sup>$</sup>19.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Duncan Komodo Kendama" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '1 - ecommerce - duncan komodo kendama' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>1</div>
+                            <h1><span>Duncan</span> Komodo Kendama</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Duncan Komodo Kendama" class="item-pic" src="images/week18-prod1.jpg" style="margin: 10px 0 0 20px; height: 70%;" />
+                    </li>
+                    
+                    
+                    <!-- 2 -->
+                    <li style="width: 292px;">
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="normal-price"><sup>$</sup>54.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Intex Seahawk 2-Person Boat Set" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '2 - ecommerce - heelys launch youths roller shoes' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>2</div>
+                            <h1><span>Heelys</span> Launch Youth&#39;s Roller Shoes</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Pro-Series Heelys Launch Youth's Roller Shoes" class="item-pic" src="images/week18-prod2.jpg" style="margin: 5px 0 0 20px; height: 85%;" />
+                    </li>
+                    
+                    
+                    <!-- 3 -->
+                    <li class="last" style="width: 308px;">
+                        <img alt="On Sale Now" class="on-sale-now" src="images/on-sale-now.gif" />
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="regular-price">
+                                    <span><sup>$</sup>249.<sup>99</sup></span><br />
+                                    Regular
+                                </div>
+                                <div class="sale-price"><sup>$</sup>149.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Stiga Advance Table Tennis Table" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '3 - sale - stiga advance table tennis table' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>3</div>
+                            <h1><span>Stiga </span> Advance Table Tennis Table</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online" style="display: none;">&amp; Online</span></div>
+                        <img alt="Stiga Advance Table Tennis Table" class="item-pic" src="images/week18-prod3.jpg" style="margin: 10px 0 0 35px; height: 73%;" />
+                    </li>
+                    
+                    
+                    <!-- 4 -->
+                    <li style="width: 206px;">
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="normal-price"><sup>$</sup>39.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Under Armour Men's Leaderboard Polo" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '4 - ecommerce -  under armour mens leaderboard polo' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>4</div>
+                            <h1><span>Under Armour</span> Men&#39;s Leaderboard Polo</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Under Armour Men's Leaderboard Polo" class="item-pic" src="images/week18-prod4.jpg" style="margin: 15px 0 0 10px; height: 68%;" />
+                    </li>
+                    
+                    
+                    <!-- 5 -->
+                    <li style="width: 206px;">
+                        <img alt="On Sale Now" class="on-sale-now" src="images/on-sale-now.gif" />
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="regular-price">
+                                	<span><sup>$</sup>64.<sup>99</sup></span><br />
+                                    Regular</div>
+                                <div class="sale-price"><sup>$</sup>49.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Skechers Skech-Flex Ultimate Reality Women's Running Shoes" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '5 - ecommerce - sale - skechers skech-flex ultimate reality womens running shoes' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>5</div>
+                            <h1><span>Skechers </span>&nbsp;Skech-Flex Women&#39;s Running Shoes</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Skechers Skech-Flex Ultimate Reality Women's Running Shoes" class="item-pic" src="images/week18-prod5.jpg" style="margin: 30px 0 0 5px; height: 65%;" />
+                    </li>
+                    
+                    
+                    <!-- 6 -->
+                    <li style="width: 206px;">
+                        <img alt="On Sale Now" class="on-sale-now" src="images/on-sale-now.gif" />
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="regular-price">
+                                	<span><sup>$</sup>159.<sup>99</sup></span><br />
+                                    Regular
+                                </div>
+                                <div class="sale-price"><sup>$</sup>109.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="E-Z UP Envoy 100 Instant Straight-Leg Canopy" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '6  - sale - e-z up envoy 100 instant straight-leg canopy' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>6</div>
+                            <h1><span>E-Z UP </span> Envoy 100 Instant Straight-Leg Canopy</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online" style="display: none;">&amp; Online</span></div>
+                        <img alt="E-Z UP Envoy 100 Instant Straight-Leg Canopy" class="item-pic" src="images/week18-prod6.jpg" style="margin: 5px 0 0 -1px; height: 70%;" />
+                    </li>
+                    
+                    
+                    <!-- 7 -->
+                    <li class="last" style="width: 206px;">
+                        <img alt="On Sale Now" class="on-sale-now" src="images/on-sale-now.gif" />
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="regular-price">
+                                    <span><sup>$</sup>39.<sup>99</sup></span><br />
+                                    Regular
+                                </div>
+                                <div class="sale-price"><sup>$</sup>29.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Coleman Deck Chair with Table " class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '7 - sale - coleman deck chair with table' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>7</div>
+                            <h1><span>Coleman </span> Deck Chair with Table</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online" style="display: none;">&amp; Online</span></div>
+                        <img alt="Coleman Deck Chair with Table" class="item-pic" src="images/week18-prod7.jpg" style="margin: 10px 0 0 0; height: 70%;" />
+                    </li>
+                    
+                    
+                    <!-- 8 -->
+                    <li style="width: 300px;">
+                        <img alt="On Sale Now" class="on-sale-now" src="images/on-sale-now.gif" />
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="regular-price">
+                                    <span><sup>$</sup>60.<sup>99</sup></span><br />
+                                    Regular
+                                </div>
+                                <div class="sale-price"><sup>$</sup>49.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Nike Downshifter 6 Wide Men's Running Shoes" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '8 - sale - nike downshifter 6 wide mens running shoes' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>8</div>
+                            <h1><span>Nike&nbsp;</span>Downshifter 6 Wide Men&#39;s Running Shoes</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online" style="display: none;">&amp; Online</span></div>
+                        <img alt="Nike Downshifter 6 Wide Men's Running Shoes" class="item-pic" src="images/week18-prod8.jpg" style="margin: 5px 0 0 40px; height: 75%;" />
+                    </li>
+                    
+                    
+                    <!-- 9 -->
+                    <li style="width: 244px;">
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="normal-price"><sup>$</sup>29.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Balance Women's Retrograde Plus Burnout Hoodie" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 28' , 'eventLabel': '9 - ecommerce - balance womens retrograde plus burnout hoodie' })">View Product</a>
+							</div>
+                        </div>
+                        <div class="item-title">
+                            <div>9</div>
+                            <h1><span>Balance </span> Women&#39;s Retrograde Plus Burnout Hoodie</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Balance Women's Retrograde Plus Burnout Hoodie" class="item-pic" src="images/week18-prod9.jpg" style="margin: 1px 0 0 5px; height: 75%;" />
+                    </li>
+                    
+                    
+                    <!-- 10 -->
+                    <li class="last" style="width: 300px;">
+                        <div class="item-hover">
+                            <div class="prices-wrapper">
+                                <div class="normal-price"><sup>$</sup>19.<sup>99</sup></div>
+                            </div>
+                            <div class="view-product">
+                                <a alt="Soffe Girls' Dri Capris" class="main-cta red-cta" href="javascript:" onclick="dataLayer.push({'eventCategory': '- desktop' , 'eventAction': '2015 04 24' , 'eventLabel': '10 - ecommerce - soffe girls dri capris' })">View Product</a>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <div>10</div>
+                            <h1><span>Soffe </span> Girls&#39; Dri Capris</h1>
+                        </div>
+                        <div class="availability">Available: In-Store <span class="online">&amp; Online</span></div>
+                        <img alt="Top Soffe Girls' Dri Capris" class="item-pic" src="images/week18-prod10.jpg" style="margin: -10px 0 0 10px; height: 95%;" />
+					</li>
+                
+                
+                </ul>
+            </div>
+            <p class="sales-notice">* While supplies last.</p>
+        </div>
+        <!-- Michael de Leon's code. CUT HERE. CUSTOM CODE END -->
+        <footer>
+        	<img src="images/template/footer.jpg" alt="footer">
+        </footer>
+	</section>
+</section>
+
+<!-- The following code is from the microsite BEGIN -->
+<script type="text/javascript" src="js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/plugins/languages/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/endeca-auto-suggest.js"></script>
+<script type="text/javascript" src="js/browse.js"></script>
+<script defer src="js/jquery.flexslider-min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="js/store.js" type="text/javascript"></script>
+<!-- The following code is from the microsite END -->
+
+</body>
+</html>

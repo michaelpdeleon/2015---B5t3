@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url('images/page-bg.jpg') repeat;
+}
+img {
+	display: block;
+}
+header {
+	background-color: #FFF;
+}
+.headerwrpr {
+	width: 970px;
+	margin: 0 auto;
+}
+nav {
+	background-color: #363394;
+}
+.navwrpr {
+	width: 970px;
+	margin: 0 auto;
+}
+.pagination {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+#wrapper {
+	width: 970px;
+	margin: 0 auto;
+}
+#container {
+	background-color: #FFF;
+}
+footer {
+	clear: both;
+	margin-bottom: 50px;
+}
