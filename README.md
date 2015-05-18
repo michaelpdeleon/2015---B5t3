@@ -4,7 +4,7 @@
 # Dates:  
 2015  
 # Technologies:  
-HTML5, CSS3, jQuery, Desktop and Mobile versions   
+HTML5, CSS3, Desktop and Mobile versions   
 # Description:  
 This website is a promotion that ran every Tuesday for a week.  New items were featured every week.  
 
