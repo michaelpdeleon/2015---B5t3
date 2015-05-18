@@ -173,6 +173,36 @@ div#b5 div#legend ul li span {
 	color: #000;
 	font-size: 0.8em;
 }
+div#b5 a.main-cta {
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 6px 33px 6px 10px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-decoration: none;
+}
+div#b5 a.red-cta {
+    color: #FFFFFF;
+    background-color: #e30000;
+    background-color: -moz-linear-gradient(top, #ff0000 0%, #e30000 100%);
+    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#e30000));
+    background-color: -webkit-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: -o-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: -ms-linear-gradient(top, #ff0000 0%,#e30000 100%);
+    background-color: linear-gradient(to bottom, #ff0000 0%,#e30000 100%);
+}
+div#b5 a.red-cta.fat-cta {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div#b5 a.red-cta:hover {
+    background-color: #900;
+}
+
 @media only screen and (min-width: 768px) {
 div#b5 {
 	width: 645px;
@@ -202,35 +232,9 @@ div#b5 div.items-section div.view-product a.red-cta {
 div#b5 div.items-section div.item-title {
 	height: 35px;
 }
-div#b5 a.main-cta {
-    position: absolute;
-    text-transform: capitalize;
-    font-size: 13px;
-    padding: 6px 33px 6px 10px;
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    text-decoration: none;
-}
 div#b5 a.red-cta {
-    color: #FFFFFF;
-    background-image: url('../images/cta-white-arrow.png');
-    background-color: #e30000;
-    background-color: -moz-linear-gradient(top, #ff0000 0%, #e30000 100%);
-    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#e30000));
-    background-color: -webkit-linear-gradient(top, #ff0000 0%,#e30000 100%);
-    background-color: -o-linear-gradient(top, #ff0000 0%,#e30000 100%);
-    background-color: -ms-linear-gradient(top, #ff0000 0%,#e30000 100%);
-    background-color: linear-gradient(to bottom, #ff0000 0%,#e30000 100%);
+	background-image: url('../images/cta-white-arrow.png');
 }
-div#b5 a.red-cta.fat-cta {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-div#b5 a.red-cta:hover {
-    background-color: #900;
 }
 </style>
 <!-- Michael de Leon's CSS styles. CUT HERE. CUSTOM CSS END -->
